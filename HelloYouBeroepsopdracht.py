@@ -1,10 +1,20 @@
 import random
+import time
 import os
+import sys
+
+def slowprint(s):
+    for c in s + '\n':
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(1./1000)
 
 def vraag1():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je zet de tv aan en ziet dat er opstanden zijn in je land.
-    A je negeert het B je wordt al een beetje angstig
+    A je negeert het 
+    B je wordt al een beetje angstig
     ''')
     inputText = input()
     print(inputText)
@@ -15,7 +25,8 @@ def vraag1():
     
 
 def vraag2():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     De volgende dagen zie je dat het steeds onrustiger wordt,
     later hoor je een grote knal en zie je dat het oorlog is.
     A Je vlucht de stad uit en hoopt dat er ergens anders geen oorlog is
@@ -30,7 +41,8 @@ def vraag2():
     
 
 def vraag3():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je vlucht de stad uit.
     A je vlucht ver weg in je land
     B je vlucht niet ver weg in je land
@@ -44,7 +56,8 @@ def vraag3():
         
 
 def vraag4():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Het is toch erger dan je dacht je vlucht gelijk weg.
     A je vluch ver weg in je land
     B je vlucht niet ver weg in je land
@@ -57,7 +70,8 @@ def vraag4():
         vraag6()
 
 def vraag5():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Na lang reizen naar een andere stad zie je dat het daar er net zo slecht aan toe is.
     De oorlog is dus een stuk groter dan je dacht
     A je vlucht naar de andere kant van je land
@@ -71,7 +85,8 @@ def vraag5():
         vraag26()
 
 def vraag6():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je vlucht maar je was niet ver genoeg gevlucht. Je wordt
     opgepakt omdat je probeerde te vluchten
     A stribbel tegen
@@ -85,7 +100,8 @@ def vraag6():
         vraag14()
     
 def vraag7():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je zoekt de snelste  weg naar de andere kant ban je land je kan kiezen
     tussen de bus en het vliegtuig
     A je kiest de bus
@@ -96,10 +112,11 @@ def vraag7():
     if inputText == "A" or inputText == "a":
      vraag8()
     elif inputText == "B" or inputText == "b":
-        vraag15()
+        vraag21()
 
 def vraag8():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Na 15 uur in de bus ben je eindelijk aangekomen. Hier is nog
     geen oorlog maar het is hier wel al onrustig
     A je wacht af
@@ -113,7 +130,8 @@ def vraag8():
         vraag15()
 
 def vraag9():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    na een aantal dagen denk je toch verder te vluchten en gaat proberen
    de grens over te komen
    A Je gaat naar de grens
@@ -127,7 +145,8 @@ def vraag9():
         vraag16()
 
 def vraag10():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je komt aan bij de grens en ziet veel soldaten
     A je loopt er naar toe
     B je gaat terug
@@ -135,15 +154,17 @@ def vraag10():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag10()
+     vraag11()
     elif inputText == "B" or inputText == "b":
-        vraag16() 
+        vraag17() 
 
 
 def vraag11():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     De soldaten vragen wat je hier komt doen
-    A je zegt 
+    A je zegt dat je de grens over wilt
+    B je gaat terug
     ''')
     inputText = input()
     print(inputText)
@@ -153,7 +174,8 @@ def vraag11():
         vraag17()      
 
 def vraag12():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    De soldaten zeggen dat dat niet kan
    A je stribbelt tegen
    B je gaat terug
@@ -166,7 +188,8 @@ def vraag12():
         vraag17()
 
 def vraag13():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Doordat je tegen tribbelt wordt je meegenomen
    A vraag waar je naartoe wordt gebracht
    B zeg niks
@@ -179,7 +202,8 @@ def vraag13():
         vraag18()
 
 def vraag14():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
   Je bent aangekomen in de gevangenis
   A wacht 10 jaar
   B probeer weg tekomen
@@ -187,12 +211,13 @@ def vraag14():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag19()
+     vraag20()
     elif inputText == "B" or inputText == "b":
         vraag23()
 
 def vraag15():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Je gaat proberen over de grens te komen
    A je gaat naar de grens
    B je probeert contact te zoeken met smokelaars
@@ -205,7 +230,8 @@ def vraag15():
         vraag16()
 
 def vraag16():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je hebt een smokelaar gevonden die je wilt helpen.
     Ze willen dat je 5000 euro betaald
     A je betaald het
@@ -219,20 +245,26 @@ def vraag16():
         vraag1602()
 
 def vraag1601():
-    print('''
+    os.system("cls")
+    slowprint('''
     Je hebt het betaald en ze brengen je over de grens 
     ''')
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag21()
 
 def vraag1602():
-    print('''
+    os.system("cls")
+    slowprint('''
     Het is je gelukt om het te verlagen met 2000 euro. 
     Ze brengen je over de grens
     ''')
     vraag21()
 
 def vraag17():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
   Je bent terug wat doe je.
   A je gaat naar de grens
   B je probeert contact te zoeken met smokelaars
@@ -245,7 +277,8 @@ def vraag17():
         vraag16()
 
 def vraag18():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Ze zeggen dat je naar de gevangenis word gebracht omdat je niet gehoorzaamde
    A zeg dat je het er niet mee eens bent
    B zeg niks
@@ -258,7 +291,8 @@ def vraag18():
         vraag19()
 
 def vraag19():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Je bent aangekomen in de gevangenis. Het is niet
    gelukt om over de grens te komen.
    A wacht 10 jaar
@@ -272,7 +306,8 @@ def vraag19():
         vraag23()
 
 def vraag20():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Het is 10 jaar later en de grensen zijn en de grensen zijn
    een stuk minder streng bewaakt. Je kan naar de overkant
    A je gaat naar de overkant
@@ -281,12 +316,13 @@ def vraag20():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag13()
+     vraag21()
     elif inputText == "B" or inputText == "b":
         vraag40()
 
 def vraag21():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Je hoort van iemand dat je naar europa moet omdat het daar veilig is
    A ga daar naartoe
    B je blijft in het land waar je net bent aangekomen
@@ -299,7 +335,8 @@ def vraag21():
         vraag22()
 
 def vraag22():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Je blijft in het land waar je net bent aangekomen
    vraag je asiel aan?
    A ja
@@ -313,7 +350,8 @@ def vraag22():
         vraag29()
 
 def vraag12():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    De soldaten zeggen dat dat niet kan
    A je stribbelt tegen
    B je gaat terug
@@ -326,7 +364,8 @@ def vraag12():
         vraag17()
 
 def vraag23():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Iemand in de gevangenis zei tegen je dat hij een manier weet
     om weg te komen. Ga je met hem mee.
     A ja
@@ -335,16 +374,21 @@ def vraag23():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag13()
+     vraag19()
     elif inputText == "B" or inputText == "b":
         vraag2301
 
 def vraag2301():
-    print("Je wacht 10 jaar tot je vrij bent")
+    os.system("cls")
+    slowprint("Je wacht 10 jaar tot je vrij bent")
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag20()
 
 def vraag24():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
   Hij verteld je dat je in de nacht weg kan komen door een
   gat in het hek
   A je doet het
@@ -358,7 +402,8 @@ def vraag24():
         vraag17()
 
 def vraag25():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je ontsnapt.
     Aa je gaat naar de grens
     B je zoekt smokelaars op je wilt niet weer naar de
@@ -367,18 +412,23 @@ def vraag25():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag16()
+     vraag26()
     elif inputText == "B" or inputText == "b":
         vraag2501()
 
 def vraag2501():
-    print('''
+    os.system("cls")
+    slowprint('''
     je bent bij de grens en gaat naar de overkant
     ''')
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag21()
 
 def vraag26():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Je neemt het vliegtuig waar vlieg je naartoe
    A Nederland
    B Griekenland
@@ -391,7 +441,8 @@ def vraag26():
         vraag31()
 
 def vraag27():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Je neemt de busu. Het duurt heel lang
    uit eindelijk stopt de bus
    A je wacht tot de bus gaat rijden
@@ -405,11 +456,16 @@ def vraag27():
         vraag30()
 
 def vraag2701():
+    os.system("cls")
     print("De bus rijd verder")
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag28()
 
 def vraag28():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Je bent aangekomen in Nederland
    A je vraagt asiel
    B je vraagt geen asiel
@@ -422,14 +478,16 @@ def vraag28():
         vraag37()
 
 def vraag29():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    Je hebt geen asiel gevraagd. Je zoekt iemand om bij te wonen.
    En hoopt dat je niet word terug gestuurd.
     ''')
     vraag40()
 
 def vraag30():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
    De bus rijd opeens weg je moet ander vervoer zoeken.
    A je gaat lopen
    B je zoekt iemand die je kan brengen
@@ -442,15 +500,24 @@ def vraag30():
         vraag3002()
 
 def vraag3001():
-    print("Je komt aan in Europa en hoort dat je naar nederland moet gaan")
+    os.system("cls")
+    slowprint("Je komt aan in Europa en hoort dat je naar nederland moet gaan")
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag28()
 
 def vraag3002():
-    print("Iemand stopt voor je en brengt je het laatste stuk naar europa")
+    os.system("cls")
+    slowprint("Iemand stopt voor je en brengt je het laatste stuk naar europa")
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag3001()
 
 def vraag31():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je komt aan in griekenland maar ze willen dat je verder gaat in europa.
     A ga naar nederland
     B ga naar belgië
@@ -463,7 +530,8 @@ def vraag31():
         vraag37()
 
 def vraag32():
-    print('''
+    os.system("cls")
+    slowprint('''
     Je vraagt om asiel, maar ze zeggen dat je waarschijnlijk word
     afgewezen
     A je gaat slijmen
@@ -477,7 +545,8 @@ def vraag32():
         vraag37()
 
 def vraag33():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
   Ze laten je toe.
   Je moet een inburgeringstest doen.
   A doe het
@@ -486,24 +555,28 @@ def vraag33():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag3303()
+     vraag34()
     elif inputText == "B" or inputText == "b":
         vraag17()
 
 def vraag3303():
-    print("Je moet het doen om in Nederland te kunnen wonen")
+    os.system("cls")
+    slowprint("Je moet het doen om in Nederland te kunnen wonen")
+    vraag33()
 
-#def vraag34():
-#    a = ["Haalt het", "Haalt het niet"]
-#    print("Je doet het en je"+ (str(random.choice(a)):
-#        print(a)
-#    if inputText == "A" or inputText == "a":
-#     vraag40()
-#    elif inputText == "B" or inputText == "b": 
-#        vraag35()
+def vraag34():
+    os.system("cls")
+    a = ["Haalt het", "Haalt het", "Haalt het", "Haalt het", "Haalt het", "Haalt het niet"]
+    i = a[random.randint(0,5)]
+    slowprint("Je doet het en je "+ (str(i)))
+    if i == "Haalt het":
+        vraag4001()
+    elif i == "Haalt het niet": 
+        vraag35()
 
 def vraag35():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je hoort dat je weg moet. Je vraagt of je echt niet kan blijven
     maar ze zeggen dat je echt terug moet. 
     A je blijft in nederland
@@ -517,13 +590,15 @@ def vraag35():
         vraag37()
 
 def vraag36():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je blijft in nederland en zoekt iemand om bij te wonen
     ''')
     vraag40()
 
 def vraag37():
-    print(''' 
+    os.system("cls")
+    slowprint(''' 
     Je hebt asiel aangevraagd en doet een inburgeringstest.
     Je hebt de test gehaald
     ''')
@@ -531,7 +606,18 @@ def vraag37():
 
 
 def vraag40():
-    print("EINDE")
+    os.system("cls")
+    slowprint('''EINDE
+    ''')
+
+def vraag4001():
+    os.system("cls")
+    slowprint("Je hebt de inburgeringstest gehaald!")
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
+    vraag40()
+
 
 vraag1()
 
