@@ -9,6 +9,12 @@ def slowprint(s):
         sys.stdout.flush()
         time.sleep(1./1000)
 
+def slowprint2(s):
+    for c in s + '\n':
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(1./10000)
+
 def vraag1():
     os.system("cls")
     slowprint(''' 
@@ -59,7 +65,7 @@ def vraag4():
     os.system("cls")
     slowprint(''' 
     Het is toch erger dan je dacht je vlucht gelijk weg.
-    A je vluch ver weg in je land
+    A je vlucht ver weg in je land
     B je vlucht niet ver weg in je land
     ''')
     inputText = input()
@@ -135,7 +141,7 @@ def vraag9():
    na een aantal dagen denk je toch verder te vluchten en gaat proberen
    de grens over te komen
    A Je gaat naar de grens
-   B je probeert contact te zoeken met smokelaars
+   B je probeert contact te zoeken met smokkelaars
     ''')
     inputText = input()
     print(inputText)
@@ -190,7 +196,7 @@ def vraag12():
 def vraag13():
     os.system("cls")
     slowprint(''' 
-   Doordat je tegen tribbelt wordt je meegenomen
+   Doordat je tegen stribbelt wordt je meegenomen
    A vraag waar je naartoe wordt gebracht
    B zeg niks
     ''')
@@ -211,7 +217,7 @@ def vraag14():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag20()
+     vraag2301()
     elif inputText == "B" or inputText == "b":
         vraag23()
 
@@ -220,7 +226,7 @@ def vraag15():
     slowprint(''' 
    Je gaat proberen over de grens te komen
    A je gaat naar de grens
-   B je probeert contact te zoeken met smokelaars
+   B je probeert contact te zoeken met smokkelaars
     ''')
     inputText = input()
     print(inputText)
@@ -232,7 +238,7 @@ def vraag15():
 def vraag16():
     os.system("cls")
     slowprint(''' 
-    Je hebt een smokelaar gevonden die je wilt helpen.
+    Je hebt een smokkelaar gevonden die je wilt helpen.
     Ze willen dat je 5000 euro betaald
     A je betaald het
     B je probeert te onderhandelen
@@ -260,6 +266,9 @@ def vraag1602():
     Het is je gelukt om het te verlagen met 2000 euro. 
     Ze brengen je over de grens
     ''')
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag21()
 
 def vraag17():
@@ -267,7 +276,7 @@ def vraag17():
     slowprint(''' 
   Je bent terug wat doe je.
   A je gaat naar de grens
-  B je probeert contact te zoeken met smokelaars
+  B je probeert contact te zoeken met smokkelaars
     ''')
     inputText = input()
     print(inputText)
@@ -301,14 +310,14 @@ def vraag19():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag20()
+     vraag2301()
     elif inputText == "B" or inputText == "b":
         vraag23()
 
 def vraag20():
     os.system("cls")
     slowprint(''' 
-   Het is 10 jaar later en de grensen zijn en de grensen zijn
+   Het is 10 jaar later en de grensen zijn
    een stuk minder streng bewaakt. Je kan naar de overkant
    A je gaat naar de overkant
    B je bedenkt je. je blijft tot de oorlog voorbij is
@@ -330,7 +339,7 @@ def vraag21():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag25()
+     vraag27()
     elif inputText == "B" or inputText == "b":
         vraag22()
 
@@ -349,20 +358,6 @@ def vraag22():
     elif inputText == "B" or inputText == "b":
         vraag29()
 
-def vraag12():
-    os.system("cls")
-    slowprint(''' 
-   De soldaten zeggen dat dat niet kan
-   A je stribbelt tegen
-   B je gaat terug
-    ''')
-    inputText = input()
-    print(inputText)
-    if inputText == "A" or inputText == "a":
-     vraag13()
-    elif inputText == "B" or inputText == "b":
-        vraag17()
-
 def vraag23():
     os.system("cls")
     slowprint(''' 
@@ -374,16 +369,18 @@ def vraag23():
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag19()
+     vraag24()
     elif inputText == "B" or inputText == "b":
-        vraag2301
+        vraag2301()
 
 def vraag2301():
     os.system("cls")
     slowprint("Je wacht 10 jaar tot je vrij bent")
     print("")
-    print("wacht 3 seconden")
+    print("je wacht 10 jaar")
     time.sleep(3)
+    print("nee grapje eigenlijk maar 10 seconden")
+    time.sleep(10)
     vraag20()
 
 def vraag24():
@@ -399,20 +396,20 @@ def vraag24():
     if inputText == "A" or inputText == "a":
      vraag25()
     elif inputText == "B" or inputText == "b":
-        vraag17()
+        vraag2301()
 
 def vraag25():
     os.system("cls")
     slowprint(''' 
     Je ontsnapt.
     Aa je gaat naar de grens
-    B je zoekt smokelaars op je wilt niet weer naar de
+    B je zoekt smokkelaars op je wilt niet weer naar de
     gevangenis
      ''')
     inputText = input()
     print(inputText)
     if inputText == "A" or inputText == "a":
-     vraag26()
+     vraag2501()
     elif inputText == "B" or inputText == "b":
         vraag2501()
 
@@ -443,7 +440,7 @@ def vraag26():
 def vraag27():
     os.system("cls")
     slowprint(''' 
-   Je neemt de busu. Het duurt heel lang
+   Je neemt de bus. Het duurt heel lang
    uit eindelijk stopt de bus
    A je wacht tot de bus gaat rijden
    B je gaat uit de bus
@@ -483,6 +480,9 @@ def vraag29():
    Je hebt geen asiel gevraagd. Je zoekt iemand om bij te wonen.
    En hoopt dat je niet word terug gestuurd.
     ''')
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag40()
 
 def vraag30():
@@ -557,7 +557,7 @@ def vraag33():
     if inputText == "A" or inputText == "a":
      vraag34()
     elif inputText == "B" or inputText == "b":
-        vraag17()
+        vraag3303()
 
 def vraag3303():
     os.system("cls")
@@ -602,13 +602,24 @@ def vraag37():
     Je hebt asiel aangevraagd en doet een inburgeringstest.
     Je hebt de test gehaald
     ''')
+    print("")
+    print("wacht 3 seconden")
+    time.sleep(3)
     vraag40()
 
 
 def vraag40():
     os.system("cls")
-    slowprint('''EINDE
+    slowprint2('''
+                   ========================================================
+                   |   EEEEEEEEE   EE   EEE   EE   EEEEEE     EEEEEEEEE  |
+                   |   EE          EE   EE E  EE   EE    EE   EE         |
+                   |   EEEEEEEEE   EE   EE  E EE   EE    EE   EEEEEEEEE  |
+                   |   EE          EE   EE   EEE   EE    EE   EE         |
+                   |   EEEEEEEEE   EE   EE    EE   EEEEEE     EEEEEEEEE  |     
+                   ========================================================
     ''')
+    time.sleep(5)
 
 def vraag4001():
     os.system("cls")
@@ -618,7 +629,11 @@ def vraag4001():
     time.sleep(3)
     vraag40()
 
-
+slowprint('''   Beroeps opdracht vluchtelingen verhaal
+            Boi Lipmann SD1B
+        druk op enter om te starten ''')
+input()
+os.system("cls")
 vraag1()
 
 
